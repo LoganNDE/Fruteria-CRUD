@@ -12,11 +12,13 @@
 <body>
     <header class="w-full bg-gray-100 flex justify-center">
         <div class="w-4/6 flex justify-between items-center">
-            <img src="" alt="LOGO">
+            <a href=" {{ route('index') }} ">
+                <img src="https://static.vecteezy.com/system/resources/previews/019/782/664/non_2x/avocado-cartoon-character-free-png.png" class="h-15" alt="LOGO">
+            </a>
             @if (auth()->check())
-                <a class="px-4 h-8 flex items-center justify-center no-underline text-gray-50 text-lg rounded-md bg-slate-400" href="{{ route('logout') }}">Cerrar sesión</a>
+                <a class="btn btn-danger" href="{{ route('logout') }}">Cerrar sesión</a>
             @else
-            <a class="px-4 h-8 flex items-center justify-center text-lg rounded-md bg-slate-400" href="{{ route('redirectLogin') }}">Iniciar sesión</a>
+            <a class="btn btn-primary" href="{{ route('redirectLogin') }}">Iniciar sesión</a>
             @endif
         </div>
         
