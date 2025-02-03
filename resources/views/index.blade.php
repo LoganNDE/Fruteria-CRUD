@@ -41,13 +41,13 @@
                         <td>{{ $fruta->stock }} unidades</td>
                         @if (auth()->check())
                             <td>
-                                <a href="{{ route('fruteria.show', $fruta->id) }}" class="btn btn-sm btn-info">Ver</a>
-                                <a href="{{ route ('fruteria.edit',$fruta->id) }}" class="btn btn-sm btn-warning">Editar</a>
+                                <a href="{{ route('fruteria.show', $fruta->id) }}" class="btn btn-sm btn-info"><i class="bi bi-eye"></i></a>
+                                <a href="{{ route ('fruteria.edit',$fruta->id) }}" class="btn btn-sm btn-warning"><i class="bi bi-pen"></i></a>
                                 <form action="{{ route('fruteria.destroy', $fruta->id) }}" method="POST" class="d-inline">
                                     @csrf
                                     @method('DELETE')
-                                    <button type="submit" class="btn btn-sm btn-danger" onclick="return confirm('¿Estás seguro de eliminar esta fruta?')">
-                                        Eliminar
+                                    <button type="submit" class="btn btn-sm btn-danger"  onclick="return confirm('¿Estás seguro de eliminar esta fruta?')">
+                                        <i class="bi bi-trash"></i>
                                     </button>
                                 </form>
                             </td>

@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="style.css">
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
     <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
     <title>@yield('titulo')</title>
 </head>
 <body>
